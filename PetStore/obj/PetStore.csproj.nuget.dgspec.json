@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\radul\\source\\repos\\PetStore\\PetStore\\PetStore.csproj": {}
+    "C:\\Users\\radul\\Desktop\\PetStore\\PetStore\\PetStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj": {
+    "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
+        "projectUniqueName": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
         "projectName": "PetStore.Data.Model",
-        "projectPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
+        "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
         "packagesPath": "C:\\Users\\radul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\obj\\",
+        "outputPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj": {
+    "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj",
+        "projectUniqueName": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj",
         "projectName": "PetStore.Data",
-        "projectPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj",
+        "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj",
         "packagesPath": "C:\\Users\\radul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data\\obj\\",
+        "outputPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj": {
-                "projectPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj"
+              "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj"
               }
             }
           }
@@ -142,14 +142,72 @@
         }
       }
     },
-    "C:\\Users\\radul\\source\\repos\\PetStore\\PetStore\\PetStore.csproj": {
+    "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\PetStore.Services.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radul\\source\\repos\\PetStore\\PetStore\\PetStore.csproj",
-        "projectName": "PetStore",
-        "projectPath": "C:\\Users\\radul\\source\\repos\\PetStore\\PetStore\\PetStore.csproj",
+        "projectUniqueName": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\PetStore.Services.Model.csproj",
+        "projectName": "PetStore.Services.Model",
+        "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\PetStore.Services.Model.csproj",
         "packagesPath": "C:\\Users\\radul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radul\\source\\repos\\PetStore\\PetStore\\obj\\",
+        "outputPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\radul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\radul\\Desktop\\PetStore\\PetStoreServices\\PetStore.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\radul\\Desktop\\PetStore\\PetStoreServices\\PetStore.Services.csproj",
+        "projectName": "PetStore.Services",
+        "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStoreServices\\PetStore.Services.csproj",
+        "packagesPath": "C:\\Users\\radul\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStoreServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -170,8 +228,85 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj": {
-                "projectPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj"
+              "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj"
+              },
+              "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj"
+              },
+              "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\PetStore.Services.Model.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\PetStore.Services.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\radul\\Desktop\\PetStore\\PetStore\\PetStore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore\\PetStore.csproj",
+        "projectName": "PetStore",
+        "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore\\PetStore.csproj",
+        "packagesPath": "C:\\Users\\radul\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\radul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj"
+              },
+              "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data\\PetStore.Data.csproj"
+              },
+              "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\PetStore.Services.Model.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStore.Services.Model\\PetStore.Services.Model.csproj"
+              },
+              "C:\\Users\\radul\\Desktop\\PetStore\\PetStoreServices\\PetStore.Services.csproj": {
+                "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\PetStoreServices\\PetStore.Services.csproj"
               }
             }
           }

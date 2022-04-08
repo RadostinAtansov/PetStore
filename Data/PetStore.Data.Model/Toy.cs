@@ -1,4 +1,4 @@
-﻿using PetStore.Data.Configuration;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace PetStore.Data.Model
@@ -17,6 +17,10 @@ namespace PetStore.Data.Model
         public string Description { get; set; }
 
         public decimal Price { get; set; }
+
+        public decimal DestributorPRice { get; set; }
+
+        public double Profit { get; set; }
 
         public int BrandId { get; set; }
         public Brand Brand { get; set; }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PetStore.Data.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialMigrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -71,6 +71,7 @@ namespace PetStore.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Weight = table.Column<double>(type: "float", nullable: false),
+                    DestributorPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
                     DataExpire = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BrandId = table.Column<int>(type: "int", nullable: false),
@@ -101,7 +102,9 @@ namespace PetStore.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    DestributorPRice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Profit = table.Column<double>(type: "float", nullable: false),
                     BrandId = table.Column<int>(type: "int", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -144,7 +147,7 @@ namespace PetStore.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FoodOrder",
+                name: "FoodOrders",
                 columns: table => new
                 {
                     FoodId = table.Column<int>(type: "int", nullable: false),
@@ -152,15 +155,15 @@ namespace PetStore.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FoodOrder", x => new { x.FoodId, x.OrderId });
+                    table.PrimaryKey("PK_FoodOrders", x => new { x.FoodId, x.OrderId });
                     table.ForeignKey(
-                        name: "FK_FoodOrder_Foods_FoodId",
+                        name: "FK_FoodOrders_Foods_FoodId",
                         column: x => x.FoodId,
                         principalTable: "Foods",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_FoodOrder_Orders_OrderId",
+                        name: "FK_FoodOrders_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "Id",
@@ -205,7 +208,7 @@ namespace PetStore.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ToyOrder",
+                name: "ToyOrders",
                 columns: table => new
                 {
                     ToyId = table.Column<int>(type: "int", nullable: false),
@@ -213,15 +216,15 @@ namespace PetStore.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ToyOrder", x => new { x.OrderId, x.ToyId });
+                    table.PrimaryKey("PK_ToyOrders", x => new { x.OrderId, x.ToyId });
                     table.ForeignKey(
-                        name: "FK_ToyOrder_Orders_OrderId",
+                        name: "FK_ToyOrders_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ToyOrder_Toys_ToyId",
+                        name: "FK_ToyOrders_Toys_ToyId",
                         column: x => x.ToyId,
                         principalTable: "Toys",
                         principalColumn: "Id",
@@ -229,8 +232,8 @@ namespace PetStore.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_FoodOrder_OrderId",
-                table: "FoodOrder",
+                name: "IX_FoodOrders_OrderId",
+                table: "FoodOrders",
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
@@ -264,8 +267,8 @@ namespace PetStore.Data.Migrations
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ToyOrder_ToyId",
-                table: "ToyOrder",
+                name: "IX_ToyOrders_ToyId",
+                table: "ToyOrders",
                 column: "ToyId");
 
             migrationBuilder.CreateIndex(
@@ -288,13 +291,13 @@ namespace PetStore.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "FoodOrder");
+                name: "FoodOrders");
 
             migrationBuilder.DropTable(
                 name: "Pets");
 
             migrationBuilder.DropTable(
-                name: "ToyOrder");
+                name: "ToyOrders");
 
             migrationBuilder.DropTable(
                 name: "Foods");

@@ -1,6 +1,4 @@
-﻿using PetStore.Data.Configuration;
-
-namespace PetStore.Data.Model
+﻿namespace PetStore.Data.Model
 {
     public class Order
     {

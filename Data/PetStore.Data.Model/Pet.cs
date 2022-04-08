@@ -14,6 +14,8 @@ namespace PetStore.Data.Model
         
         public Gender Gender { get; set; }
 
+        public DateTime DateOfBird { get; set; }
+
         public decimal Price { get; set; }
 
         [MaxLength(DescriptionMaxLength)]

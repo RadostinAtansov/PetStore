@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PetStore.Data.Model
 {
@@ -13,6 +15,8 @@ namespace PetStore.Data.Model
         public string Name { get; set; }
 
         public double Weight { get; set; }
+
+        public decimal DestributorPrice { get; set; }
 
         public decimal Price { get; set; }
 

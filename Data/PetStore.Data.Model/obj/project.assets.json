@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
+      "projectUniqueName": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
       "projectName": "PetStore.Data.Model",
-      "projectPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
+      "projectPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\PetStore.Data.Model.csproj",
       "packagesPath": "C:\\Users\\radul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\radul\\source\\repos\\PetStore\\Data\\PetStore.Data.Model\\obj\\",
+      "outputPath": "C:\\Users\\radul\\Desktop\\PetStore\\Data\\PetStore.Data.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

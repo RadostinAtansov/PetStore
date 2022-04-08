@@ -72,6 +72,6 @@ namespace PetStore.Services.Implementations
                       Name = br.Name
                   })
                   .ToList();
-        
+
     }
 }
