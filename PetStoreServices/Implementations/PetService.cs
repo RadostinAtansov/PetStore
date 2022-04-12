@@ -1,10 +1,13 @@
 ﻿using PetStore.Data;
 using PetStore.Data.Model;
+using PetStore.Services.Model.Pet;
 
 namespace PetStore.Services.Implementations
 {
     public class PetService : IPetService
     {
+        private const int petsPageSize = 25;
+
         private readonly PetStoreDbContext data;
         private readonly IBreedService breedService;
         private readonly ICategoryService categoryService;
@@ -17,6 +20,20 @@ namespace PetStore.Services.Implementations
             this.categoryService = categoryService;
             this.userService = userService;
         }
+
+        public IEnumerable<PetListingServiceModel> All(int page = 1)
+            => this.data
+            .Pets
+            .Skip((page - 1) * petsPageSize)
+            .Take(petsPageSize)
+            .Select(p => new PetListingServiceModel
+            {
+                Id = p.Id,
+                Price = p.Price,
+                Breed = p.Breed.Name,
+                Category = p.Category.Name
+            })
+            .ToList();
 
         public void Buypet(Gender gender, DateTime dateTime, decimal price, string description, int breedId, int categoryId, DateTime dateOfBird)
         {

@@ -1,6 +1,7 @@
 ﻿ namespace PetStore.Data
 {
     using Microsoft.EntityFrameworkCore;
+    using PetStore.Data.Model;
     using PetStore.Services.Implementations;
 
     public class Program
@@ -8,20 +9,56 @@
 
         public static void Main(string[] args)
         {
-            var db = new PetStoreDbContext();
-            //db.Database.EnsureDeleted();
-            //db.Database.EnsureCreated();
-            //db.Database.Migrate();
+            var data = new PetStoreDbContext();
 
+            for (int i = 0; i < 10; i++)
+            {
+                var breed = new Breed
+                {
+                    Name = "Breed" + i,
+                };
+                data.Breeds.Add(breed);
+            }
+            data.SaveChanges();
 
-            /*var userService = new UserService(db)*/
-            ;
-            //var foodService = new FoodService(db, userService);
-            //userService.Register("Pesho", "pesho@abv.bg");
-            //foodService.SellFoodToUser(7, 1);
-            //foodService.BuyFromDistributor("Cat food", 0.350, 1.1m, 0.3, DateTime.Now, 1, 3);
-            //var toyService = new ToyService(db);
-            //toyService.BuyFromDistributor("Ball", "Bouncing", 3.50m, 0.3, 1, 3);
+            for (int i = 0; i < 30; i++)
+            {
+                var category = new Category
+                {
+                    Name = "Category" + i,
+                    Description = "Category desciption" + i,
+                };
+                data.Categories.Add(category);
+            }
+            data.SaveChanges();
+
+            for (int i = 0; i < 100; i++)
+            {
+                var breed = data
+                    .Breeds
+                    .OrderBy(c => Guid.NewGuid())
+                    .Select(c => c.Id)
+                    .FirstOrDefault();
+
+                var category = data
+                    .Categories
+                    .OrderBy(c => Guid.NewGuid())
+                    .Select(c => c.Id)
+                    .FirstOrDefault();
+
+                var pet = new Pet
+                {
+                    Name = "Gosho" + i,
+                    DateOfBird = DateTime.UtcNow.AddDays(-60 + i),
+                    Price = 50 + i,
+                    Gender = (Gender)(i % 2),
+                    Description = "Some randem description" + i,
+                    CategoryId = category,
+                    BreedId = breed,
+                };
+                data.Pets.Add(pet);
+            }
+            data.SaveChanges();
 
         }
     }
