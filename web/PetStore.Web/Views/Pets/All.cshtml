@@ -1,0 +1,47 @@
+﻿@model AllPetsViewModel
+
+<h1>All Pets</h1>
+<h2>All Pets</h2>
+<h3>All Pets</h3>
+<h4>All Pets</h4>
+<h5>All Pets</h5>
+<h6>All Pets</h6>
+<h7>All Pets</h7>
+
+<div>
+    <a href="/Pets/All?page=@Model.PreviousPage" class="float-start btn btn-primary">Prev</a>
+    <a href="/Pets/All?page=@Model.NextPage" class="float-end btn btn-primary">Next</a>
+</div>
+
+<br />
+<br />
+<br />
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            Type
+        </th>
+        <th>
+            Breed
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
+
+@foreach(var pet in Model.Pets)
+{
+    <tr>
+        <td>
+          (@pet.Id) @pet.Category
+        </td>
+        <td>
+            @pet.Breed
+        </td>
+        <td>
+            @pet.Price
+        </td>
+    </tr>
+}
+</table>
